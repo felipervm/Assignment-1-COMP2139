@@ -1,0 +1,47 @@
+
+@model List<Event>
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h2>All Events</h2>
+<a href="/events/create" class="btn btn-primary mb-3">Add New Event</a>
+
+@if (Model?.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Available</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var evt in Model)
+                {
+                    <tr>
+                        <td>@evt.Title</td>
+                        <td>@evt.Category?.Name</td>
+                        <td>@evt.EventDateTime.ToString("MMM dd, yyyy HH:mm")</td>
+                        <td>$@evt.TicketPrice</td>
+                        <td>@evt.AvailableTickets</td>
+                        <td>
+                            <a href="/events/details/@evt.EventId" class="btn btn-sm btn-info">View</a>
+                            <a href="/events/edit/@evt.EventId" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="/events/delete/@evt.EventId" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No events found.</p>
+}

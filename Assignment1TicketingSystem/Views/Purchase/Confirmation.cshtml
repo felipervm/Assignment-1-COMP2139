@@ -1,0 +1,43 @@
+@model Assignment1TicketingSystem.Models.Purchase
+@{
+    ViewData["Title"] = "Purchase Confirmation";
+}
+
+<h2>Purchase Confirmation</h2>
+
+<div class="card p-3 mb-3">
+    <p><strong>Purchase ID:</strong> @Model.PurchaseId</p>
+    <p><strong>Guest Name:</strong> @Model.GuestName</p>
+    <p><strong>Guest Email:</strong> @Model.GuestEmail</p>
+    @if (!string.IsNullOrEmpty(Model.GuestPhone))
+    {
+        <p><strong>Guest Phone:</strong> @Model.GuestPhone</p>
+    }
+    <p><strong>Purchase Date:</strong> @Model.PurchaseDate.ToString("MMM dd, yyyy HH:mm")</p>
+    <p><strong>Total Cost:</strong> $@Model.TotalCost</p>
+</div>
+
+<h4>Tickets Purchased</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PurchaseItems)
+        {
+            <tr>
+                <td>@item.Event.Title</td>
+                <td>@item.Event.Category?.Name</td>
+                <td>@item.Quantity</td>
+                <td>$@item.UnitPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Select" class="btn btn-primary">Back to Events</a>

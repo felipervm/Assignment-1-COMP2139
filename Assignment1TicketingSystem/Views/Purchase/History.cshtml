@@ -1,0 +1,48 @@
+@model List<Assignment1TicketingSystem.Models.Purchase>
+@{
+    ViewData["Title"] = "Purchase History";
+}
+
+<h2>Purchase History</h2>
+
+@if (Model?.Count > 0)
+{
+    <div class="table-responsive mt-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Purchase ID</th>
+                    <th>Guest Name</th>
+                    <th>Guest Email</th>
+                    <th>Date</th>
+                    <th>Total Cost</th>
+                    <th>Items</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var purchase in Model)
+                {
+                    <tr>
+                        <td>@purchase.PurchaseId</td>
+                        <td>@purchase.GuestName</td>
+                        <td>@purchase.GuestEmail</td>
+                        <td>@purchase.PurchaseDate.ToString("MMM dd, yyyy HH:mm")</td>
+                        <td>$@purchase.TotalCost</td>
+                        <td>
+                            <ul>
+                                @foreach (var item in purchase.PurchaseItems)
+                                {
+                                    <li>@item.Event.Title x @item.Quantity</li>
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>No purchases found.</p>
+}
