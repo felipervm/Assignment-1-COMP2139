@@ -1,60 +1,76 @@
 @{
     ViewData["Title"] = "Event Overview";
+    var lowStockEvents = ViewBag.LowStockEvents as List<Assignment1TicketingSystem.Models.Event> ?? new List<Assignment1TicketingSystem.Models.Event>();
+    var soldOutEvents = ViewBag.SoldOutEvents as List<Assignment1TicketingSystem.Models.Event> ?? new List<Assignment1TicketingSystem.Models.Event>();
 }
 
-<h2>Event Overview</h2>
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">🎟️ Event Overview</h2>
 
-<div class="row mb-4">
-    <div class="col-md-4">
-        <div class="card text-white bg-primary mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Total Events</h5>
-                <p class="card-text display-6">@ViewBag.TotalEvents</p>
+    <!-- Quick Navigation -->
+    <div class="d-flex justify-content-center mb-4">
+        <a asp-action="Index" class="btn btn-outline-primary me-2">← Back to Events</a>
+        <a asp-action="Create" class="btn btn-success">+ Add New Event</a>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Events</h5>
+                    <p class="card-text display-6 fw-bold">@ViewBag.TotalEvents</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Categories</h5>
+                    <p class="card-text display-6 fw-bold">@ViewBag.TotalCategories</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card text-white bg-success mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Total Categories</h5>
-                <p class="card-text display-6">@ViewBag.TotalCategories</p>
-            </div>
-        </div>
-    </div>
+
+    <!-- Low Ticket Events -->
+    <h4 class="mt-5 mb-3 text-warning">⚠️ Low Ticket Events (&lt; 5 available)</h4>
+    @if (lowStockEvents.Count > 0)
+    {
+        <ul class="list-group mb-4">
+            @foreach (var evt in lowStockEvents)
+            {
+                var badgeClass = evt.AvailableTickets < 3 ? "bg-danger" : "bg-warning text-dark";
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>
+                        <strong>@evt.Title</strong> — @evt.AvailableTickets tickets left
+                    </span>
+                    <span class="badge @badgeClass">@evt.Category?.Name</span>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <div class="alert alert-success">All events have enough tickets available.</div>
+    }
+
+    <!-- Sold Out Events -->
+    <h4 class="mt-5 mb-3 text-danger">❌ Sold Out Events</h4>
+    @if (soldOutEvents.Count > 0)
+    {
+        <ul class="list-group">
+            @foreach (var evt in soldOutEvents)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><strong>@evt.Title</strong></span>
+                    <span class="badge bg-danger">Sold Out</span>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <div class="alert alert-success">No sold out events.</div>
+    }
 </div>
-
-<h4>Low Ticket Events (&lt; 5 available)</h4>
-@if (((List<Assignment1TicketingSystem.Models.Event>)ViewBag.LowStockEvents)?.Count > 0)
-{
-    <ul class="list-group mb-4">
-        @foreach (var evt in ViewBag.LowStockEvents)
-        {
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                @evt.Title (@evt.AvailableTickets tickets)
-                <span class="badge bg-warning text-dark">@evt.Category?.Name</span>
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>No low ticket events.</p>
-}
-
-<h4>Sold Out Events</h4>
-@if (((List<Assignment1TicketingSystem.Models.Event>)ViewBag.SoldOutEvents)?.Count > 0)
-{
-    <ul class="list-group">
-        @foreach (var evt in ViewBag.SoldOutEvents)
-        {
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                @evt.Title
-                <span class="badge bg-danger">Sold Out</span>
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>No sold out events.</p>
-}

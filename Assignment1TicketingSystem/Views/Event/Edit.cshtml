@@ -17,26 +17,17 @@
 
     <div class="mb-3">
         <label asp-for="CategoryId" class="form-label">Category</label>
-        <select asp-for="CategoryId" class="form-select">
+        <select asp-for="CategoryId" class="form-select" 
+                asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "Name", Model.CategoryId))">
             <option value="">-- Select Category --</option>
-            @foreach (var cat in ViewBag.Categories)
-            {
-                <div class="mb-3">
-    <label asp-for="CategoryId" class="form-label">Category</label>
-    <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "Name", Model.CategoryId))">
-        <option value="">-- Select Category --</option>
-    </select>
-    <span asp-validation-for="CategoryId" class="text-danger"></span>
-</div>
-
-            }
         </select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label asp-for="EventDateTime" class="form-label">Date & Time</label>
-        <input asp-for="EventDateTime" type="datetime-local" class="form-control" value="@Model.EventDateTime.ToString("yyyy-MM-ddTHH:mm")" />
+        <input asp-for="EventDateTime" type="datetime-local" class="form-control"
+               value="@Model.EventDateTime.ToString("yyyy-MM-ddTHH:mm")" />
         <span asp-validation-for="EventDateTime" class="text-danger"></span>
     </div>
 

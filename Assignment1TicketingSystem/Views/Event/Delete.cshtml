@@ -14,7 +14,12 @@
     <p><strong>Available Tickets:</strong> @Model.AvailableTickets</p>
 </div>
 
-<form asp-action="Delete" asp-route-id="@Model.EventId" method="post">
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.EventId" method="post">
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-danger">Delete</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
+
+
+
+
