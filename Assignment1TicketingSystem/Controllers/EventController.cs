@@ -16,7 +16,7 @@ namespace Assignment1TicketingSystem.Controllers
             _context = context;
             _logger = logger;
         }
-
+         
         // GET: /events
         [HttpGet("")]
         public async Task<IActionResult> Index(string? search, int? categoryId)
