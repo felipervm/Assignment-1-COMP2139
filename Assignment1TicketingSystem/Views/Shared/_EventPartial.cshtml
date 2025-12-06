@@ -1,0 +1,7 @@
+@model Assignment1TicketingSystem.Models.Event
+<div class="card event-card mb-2 p-2">
+    <h5>@Model.Title</h5>
+    <div>@Model.EventDateTime.ToString("g")</div>
+    <div>@Model.TicketPrice.ToString("C")</div>
+    <a class="btn btn-sm btn-primary" href="/purchase/checkout/@Model.EventId">Buy</a>
+</div>

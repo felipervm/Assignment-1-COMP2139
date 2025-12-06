@@ -52,6 +52,8 @@ namespace Assignment1TicketingSystem.Models
         [NotMapped]
         public bool IsSoldOut => AvailableTickets == 0;
 
+        public string? CreatorId { get; set; }  // Add this
+
         [NotMapped]
         public int TotalTicketsSold => PurchaseItems?.Sum(pi => pi.Quantity) ?? 0;
 

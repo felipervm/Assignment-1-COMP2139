@@ -37,42 +37,15 @@ namespace Assignment1TicketingSystem.Models
         [Display(Name = "Status")]
         public string Status { get; set; } = "Completed";
 
-        // Navigation Property
-        public virtual ICollection<PurchaseItem>? PurchaseItems { get; set; } = new List<PurchaseItem>();
+        // 🔥 MISSING PROPERTY ADDED
+        public virtual ICollection<PurchaseItem> PurchaseItems { get; set; } 
+            = new List<PurchaseItem>();
 
-        // Helper Property
+        // Helper property
         [NotMapped]
-        public int TotalTickets => PurchaseItems?.Sum(pi => pi.Quantity) ?? 0;
-    }
-
-    public class PurchaseItem
-    {
-        [Key]
-        public int PurchaseItemId { get; set; }
-
-        [Required]
-        [ForeignKey("Purchase")]
-        public int PurchaseId { get; set; }
-
-        [Required]
-        [ForeignKey("Event")]
-        public int EventId { get; set; }
-
-        [Required(ErrorMessage = "Quantity is required")]
-        [Range(1, 1000, ErrorMessage = "Quantity must be between 1 and 1000")]
-        public int Quantity { get; set; }
-
-        [Required]
-        [DataType(DataType.Currency)]
-        [Display(Name = "Unit Price")]
-        public decimal UnitPrice { get; set; }
-
-        // Navigation Properties
-        public virtual Purchase? Purchase { get; set; }
-        public virtual Event? Event { get; set; }
-
-        // Helper Property
-        [NotMapped]
-        public decimal ItemTotal => Quantity * UnitPrice;
+        public int TotalTickets => PurchaseItems.Sum(pi => pi.Quantity);
     }
 }
+
+     
+

@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/js/cart.js",
+      "PackagePath": "staticwebassets/js/cart.js"
+    },
+    {
+      "Id": "/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/js/liveSearch.js",
+      "PackagePath": "staticwebassets/js/liveSearch.js"
+    },
+    {
       "Id": "/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

@@ -1,67 +1,95 @@
-using Microsoft.EntityFrameworkCore;
 using Assignment1TicketingSystem.Data;
+using Assignment1TicketingSystem.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+// Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
+// MVC + Razor
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
-// Configure Entity Framework with SQL Server
+// EF + SQL Server (Azure)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add logging
-builder.Services.AddLogging(logging =>
+// Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
-    logging.ClearProviders();
-    logging.AddConsole();
-    logging.AddDebug();
+    options.SignIn.RequireConfirmedEmail = true;
+    options.Password.RequireNonAlphanumeric = false;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders();
+
+// Email
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+
+// Policy
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin"));
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// AUTO MIGRATIONS
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate(); // <-- This creates tables in Azure SQL
+}
+
+// SEED ROLES + ADMIN USER
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        context.Database.Migrate();
+        await IdentitySeed.SeedAsync(services);
+    }
+    catch (Exception ex)
+    {
+        Log.Error(ex, "An error occurred creating DB or seeding roles.");
+    }
+}
+
+// ERROR HANDLING
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseExceptionHandler("/Error/500");
+    app.UseStatusCodePagesWithReExecute("/Error/{0}");
 }
 else
 {
     app.UseDeveloperExceptionPage();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-// Map default route
+// Routes
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Initialize and seed the database
-using (var scope = app.Services.CreateScope())
-{
-    try
-    {
-        var services = scope.ServiceProvider;
-        var context = services.GetRequiredService<ApplicationDbContext>();
-        
-        // Apply migrations and create database
-        context.Database.Migrate();
-        
-        // Seed database with initial data
-        DbInitializer.Initialize(context);
-    }
-    catch (Exception ex)
-    {
-        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while seeding the database.");
-    }
-}
+app.MapRazorPages();
 
 app.Run();
+

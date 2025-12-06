@@ -1,57 +1,67 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Assignment1TicketingSystem.Models;
 
 namespace Assignment1TicketingSystem.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
+        { }
+
+        public DbSet<Event> Events { get; set; } = null!;
+        public DbSet<Category> Categories { get; set; } = null!;
+        public DbSet<Purchase> Purchases { get; set; } = null!;
+        public DbSet<PurchaseItem> PurchaseItems { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-        }
+            base.OnModelCreating(builder);
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Event> Events { get; set; }
-        public DbSet<Purchase> Purchases { get; set; }
-        public DbSet<PurchaseItem> PurchaseItems { get; set; }
+            // Category table
+            builder.Entity<Category>(entity =>
+            {
+                entity.HasKey(c => c.CategoryId);
+                entity.Property(c => c.Name).IsRequired().HasMaxLength(100);
+                entity.Property(c => c.Description).HasMaxLength(500);
+                entity.Property(c => c.CreatedDate).IsRequired();
+            });
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+            // Event table
+            builder.Entity<Event>(entity =>
+            {
+                entity.HasKey(e => e.EventId);
+                entity.Property(e => e.Title).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.TicketPrice).HasColumnType("decimal(18,2)");
+            });
 
-            // Category - Event: One-to-Many
-            modelBuilder.Entity<Event>()
-                .HasOne(e => e.Category)
-                .WithMany(c => c.Events)
-                .HasForeignKey(e => e.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict);
+            // Purchase table
+            builder.Entity<Purchase>(entity =>
+            {
+                entity.HasKey(p => p.PurchaseId);
+                entity.Property(p => p.TotalCost).HasColumnType("decimal(18,2)");
+                entity.Property(p => p.PurchaseDate).IsRequired();
+            });
 
-            // Purchase - PurchaseItem: One-to-Many
-            modelBuilder.Entity<PurchaseItem>()
-                .HasOne(pi => pi.Purchase)
-                .WithMany(p => p.PurchaseItems)
-                .HasForeignKey(pi => pi.PurchaseId)
-                .OnDelete(DeleteBehavior.Cascade);
+            // PurchaseItem table
+            builder.Entity<PurchaseItem>(entity =>
+            {
+                entity.HasKey(pi => pi.PurchaseItemId);
+                entity.Property(pi => pi.UnitPrice).HasColumnType("decimal(18,2)");
+            });
 
-            // Event - PurchaseItem: One-to-Many
-            modelBuilder.Entity<PurchaseItem>()
-                .HasOne(pi => pi.Event)
-                .WithMany(e => e.PurchaseItems)
-                .HasForeignKey(pi => pi.EventId)
-                .OnDelete(DeleteBehavior.Restrict);
+            // Add any relationships here if needed
+            builder.Entity<PurchaseItem>()
+                   .HasOne(pi => pi.Purchase)
+                   .WithMany(p => p.PurchaseItems)
+                   .HasForeignKey(pi => pi.PurchaseId);
 
-            // Decimal precision
-            modelBuilder.Entity<Event>()
-                .Property(e => e.TicketPrice)
-                .HasPrecision(18, 2);
-
-            modelBuilder.Entity<Purchase>()
-                .Property(p => p.TotalCost)
-                .HasPrecision(18, 2);
-
-            modelBuilder.Entity<PurchaseItem>()
-                .Property(pi => pi.UnitPrice)
-                .HasPrecision(18, 2);
+            builder.Entity<Event>()
+                   .HasOne(e => e.Category)
+                   .WithMany(c => c.Events)
+                   .HasForeignKey(e => e.CategoryId);
         }
     }
 }
+

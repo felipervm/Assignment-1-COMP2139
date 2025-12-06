@@ -1,0 +1,420 @@
+2025-12-05 19:45:59.541 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 19:45:59.624 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 19:45:59.642 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-12-05 19:45:59.667 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-05 19:45:59.685 +00:00 [WRN] Storing keys in a directory '/home/codespace/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is dest2025-12-05 19:45:59.685 +00:00 [WRN] Storing keys in a directory '/home/codesp2025-12-05 19:45:59.686 +00:00 [INF] User profile is available. Using '/home/codespace/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-12-05 19:45:59.916 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a".2025-12-05 19:45:59.916 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName2025-12-05 19:45:59.934 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x8002025-12-05 19:45:59.934 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumer2025-12-05 19:45:59.945 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteExc2025-12-05 19:45:59.945 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at IdentitySeed.SeedAsync(IServiceProvider serviceProvider) in /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/Data/IdentitySeed.cs:line 13
+   at Program.<Main>$(String[] args) in /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/Program.cs:line 53
+2025-12-05 21:07:37.240 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 21:07:37.302 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 21:07:37.317 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-12-05 21:07:37.338 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-05 21:07:37.356 +00:00 [WRN] Storing keys in a directory '/home/codespace/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is des2025-12-05 21:07:37.356 +00:00 [WRN] Storing keys in a directory '/home/codespa2025-12-05 21:07:37.358 +00:00 [INF] User profile is available. Using '/home/codespace/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-12-05 21:07:37.576 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"2025-12-05 21:07:37.576 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName_2025-12-05 21:07:37.597 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x802025-12-05 21:07:37.597 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumera2025-12-05 21:07:37.603 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteEx2025-12-05 21:07:37.603 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at IdentitySeed.SeedAsync(IServiceProvider serviceProvider) in /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/Data/IdentitySeed.cs:line 13
+   at Program.<Main>$(String[] args) in /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/Program.cs:line 53
+2025-12-05 21:11:12.461 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 21:11:12.511 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-12-05 21:11:12.523 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-12-05 21:11:12.542 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-05 21:11:12.555 +00:00 [WRN] Storing keys in a directory '/home/codespace/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is dest2025-12-05 21:11:12.555 +00:00 [WRN] Storing keys in a directory '/home/codesp2025-12-05 21:11:12.556 +00:00 [INF] User profile is available. Using '/home/codespace/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-12-05 21:11:12.766 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a".2025-12-05 21:11:12.766 +00:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__normalizedName2025-12-05 21:11:12.779 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x8002025-12-05 21:11:12.779 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumer2025-12-05 21:11:12.783 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteExc2025-12-05 21:11:12.783 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at IdentitySeed.SeedAsync(IServiceProvider servicePro2025-12-05 21:11:12.940 +00:00 [INF] Now listening on: http://localhost:5209
+2025-12-05 21:11:12.943 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-05 21:11:12.947 +00:00 [INF] Hosting environment: Development
+2025-12-05 21:11:12.952 +00:00 [INF] Content root path: /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem
+2025-12-05 21:11:37.372 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/ - null null
+2025-12-05 21:11:37.397 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139)'
+2025-12-05 21:11:37.413 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on2025-12-05 21:11:37.413 +00:00 [INF] Route matched with {action = "Index", controller = "Ho2025-12-05 21:11:37.465 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Events" AS "e"
+2025-12-05 21:11:37.515 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."EventId", "t"."AvailableTickets", "t"."CategoryId", 2025-12-05 21:11:37.515 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."EventId", "t"."AvailableTickets", "t"."CategoryId", "t"."CreatedDate", "t"."CreatorId", "t"."Description", "t"."EventDateTime", "t"."TicketPrice", "t"."Title", "c"."CategoryId", "c"."CreatedDate", "c"."Description", "c"."Name"
+FROM (
+    SELECT "e"."EventId", "e"."AvailableTickets", "e"."CategoryId", "e"."CreatedDate", "e"."CreatorId", "e"."Description", "e"."EventDateTime", "e"."TicketPrice", "e"."Title"
+    FROM "Events" AS "e"
+    WHERE "e"."EventDateTime" >2025-12-05 21:11:37.517 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x8002025-12-05 21:11:37.517 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumer2025-12-05 21:11:37.521 +00:00 [ERR] Error loading homepage
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionFor2025-12-05 21:11:37.521 +00:00 [ERR] Error loading homepage
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryab2025-12-05 21:11:37.550 +00:00 [INF] Executing RedirectResult, redirecting to /error?message=Error%20loading%20events.
+2025-12-05 21:11:37.554 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139) in 137.2246ms
+2025-12-05 21:11:37.556 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139)'
+2025-12-05 21:11:37.568 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/ - 302 0 null 197.7933ms
+2025-12-05 21:11:39.013 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - null null
+2025-12-05 21:11:39.017 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:11:39.027 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error(System.String) on controller Assign2025-12-05 21:11:39.027 +00:00 [INF] Route matched with {action = "Error"2025-12-05 21:11:39.064 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:11:39.096 +00:00 [INF] Executed ViewResult - view Error executed in 34.87ms.
+2025-12-05 21:11:39.096 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 66.8207ms
+2025-12-05 21:11:39.097 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:11:39.098 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - 200 null text/html; charset=utf-8 85.8817ms
+2025-12-05 21:11:39.489 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-12-05 21:11:39.517 +00:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/lib/bootstrap/dist/j2025-12-05 21:11:39.517 +002025-12-05 21:11:39.518 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78468 text/javascript 28.7996ms
+2025-12-05 21:11:40.489 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/css/site.css - null null
+2025-12-05 21:11:40.492 +00:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/css/site.css'
+2025-12-05 21:11:40.494 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/css/site.css - 200 7485 text/css 4.2752ms
+2025-12-05 21:11:40.546 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-12-05 21:11:40.550 +00:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/lib/bootstrap/dist/css/bo2025-12-05 21:11:2025-12-05 21:11:40.554 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/lib/bootstrap/dist/css/bootstrap.min.css - 200 162720 text/css 7.6187ms
+2025-12-05 21:11:42.324 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/favicon.ico - null null
+2025-12-05 21:11:42.326 +00:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: '/workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem/wwwroot/favicon.ico'
+2025-12-05 21:11:42.328 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/favicon.ico - 200 5430 image/x-icon 3.8781ms
+2025-12-05 21:11:46.300 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - null null
+2025-12-05 21:11:46.304 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:11:46.305 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error(System.String) on controller Assign2025-12-05 21:11:46.305 +00:00 [INF] Route matched with {action = "Error"2025-12-05 21:11:46.307 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:11:46.310 +00:00 [INF] Executed ViewResult - view Error executed in 3.7873ms.
+2025-12-05 21:11:46.311 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 5.3419ms
+2025-12-05 21:11:46.311 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:11:46.311 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - 200 null text/html; charset=utf-8 11.1823ms
+2025-12-05 21:15:17.738 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FLogin - null null
+2025-12-05 21:15:17.739 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:15:17.739 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error(System.String) on controller Assign2025-12-05 21:15:17.739 +00:00 [INF] Route matched with {action = "Error"2025-12-05 21:15:17.742 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:15:17.744 +00:00 [INF] Executed ViewResult - view Error executed in 1.9046ms.
+2025-12-05 21:15:17.744 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 4.6449ms
+2025-12-05 21:15:17.745 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:15:17.746 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FLogin - 200 null text/html; charset=utf-8 7.2325ms
+2025-12-05 21:15:20.784 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - null null
+2025-12-05 21:15:20.786 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:15:20.786 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error(System.String) on controller Assign2025-12-05 21:15:20.786 +00:00 [INF] Route matched with {action = "Error"2025-12-05 21:15:20.787 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:15:20.789 +00:00 [INF] Executed ViewResult - view Error executed in 1.9381ms.
+2025-12-05 21:15:20.792 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 5.2029ms
+2025-12-05 21:15:20.794 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:15:20.796 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - 200 null text/html; charset=utf-8 11.4395ms
+roller.Error (Assignment-1-COMP2139)'
+2025-12-05 21:15:20.796 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - 200 null text/html; charset=utf-8 11.4395ms
+2025-12-05 21:42:04.680 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-12-05 21:42:04.780 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsH2025-12-05 21:42:04.780 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TAB2025-12-05 21:42:04.786 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_2025-12-05 21:42:04.786 +00:00 [INF] Executed DbCommand (2ms) [Parame2025-12-05 21:42:04.790 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "Produc2025-12-05 21:42:04.790 +00:00 [INF] Executed DbCommand (0ms) [2025-12-05 21:42:04.806 +00:00 [INF] Applying migration '20251015210639_InitialCreate'.
+2025-12-05 21:42:04.834 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Categories" (
+ 2025-12-05 21:42:04.834 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Categories" (
+    "CategoryId" INTEGER NOT2025-12-05 21:42:04.835 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Purchases" (
+  2025-12-05 21:42:04.835 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Purchases" (
+    "PurchaseId" INTEGER NOT NULL CONSTRAINT "PK_Purchases" PRIMARY KEY AUTOINCREMENT,
+    "GuestName" TEXT NOT NULL,
+    "2025-12-05 21:42:04.836 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Events" (
+    "2025-12-05 21:42:04.836 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Events" (
+    "EventId" INTEGER NOT NULL CONSTRAINT "PK_Events" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "Description" TEXT NULL,
+    "CategoryId" INTEGER NOT NULL,
+    "EventDateTime" TEXT NOT NULL,
+    "TicketPrice" TEXT NOT NULL,
+    "AvailableTickets" INTEGER NOT NULL,
+    "CreatedDate" TE2025-12-05 21:42:04.837 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PurchaseItems" 2025-12-05 21:42:04.837 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PurchaseItems" (
+    "PurchaseItemId" INTEGER NOT NULL CONSTRAINT "PK_PurchaseItems" PRIMARY KEY AUTOINCREMENT,
+    "PurchaseId" INTEGER NOT NULL,
+    "EventId" INTEGER NOT NULL,
+    "Quantity" INTEGER NOT NULL,
+    "UnitPrice" TEXT NOT NULL,
+    CONSTRAINT "FK_PurchaseItems_Events_EventId" FOREIGN KEY ("EventId") REFERENCES "Events" ("EventId") ON DELETE R2025-12-05 21:42:04.838 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Events_Categ2025-12-05 21:42:04.838 +00:00 [INF2025-12-05 21:42:04.839 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_PurchaseItem2025-12-05 21:42:04.839 +00:00 [INF] Execut2025-12-05 21:42:04.840 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_PurchaseItem2025-12-05 21:42:04.840 +00:00 [INF] Executed DbC2025-12-05 21:42:04.840 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHi2025-12-05 21:42:04.840 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='2025-12-05 21:42:04.862 +00:00 [WRN] Storing keys in a directory '/home/codespace/.aspnet/DataProtection-Keys' that may not be persisted outside of th2025-12-05 21:42:04.862 +00:00 [WRN] Storing keys in a directory '/home/codespace/.aspnet/DataProtection-Keys' that may not be persisted outside of 2025-12-05 21:42:04.863 +00:00 [INF] User profile is available. Using '/home/codespace/.aspnet/DataProtection-Keys' as key repository; keys will not b2025-12-05 21:42:04.82025-12-05 21:42:05.073 +00:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandT2025-12-05 21:42:05.073 +00:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT 2025-12-05 21:42:05.085 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Da2025-12-05 21:42:05.085 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerato2025-12-05 21:42:05.089 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 2025-12-05 21:42:05.089 +00:00 [ERR] An error occurred creating DB or seeding roles.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: AspNetRoles'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.RoleManager`1.RoleExistsAsync(String roleName)
+   at IdentitySeed.SeedAsync(IServiceProvider serviceProvider) in /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem2025-12-05 21:42:05.199 +00:00 [INF] Now listening on: http://localhost:5209
+2025-12-05 21:42:05.203 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-05 21:42:05.204 +00:00 [INF] Hosting environment: Development
+2025-12-05 21:42:05.204 +00:00 [INF] Content root path: /workspaces/Assignment-1-COMP2139/Assignment1TicketingSystem
+2025-12-05 21:42:50.586 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/ - null null
+2025-12-05 21:42:50.611 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139)'
+2025-12-05 21:42:50.623 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Thr2025-12-05 21:42:50.623 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Task2025-12-05 21:42:50.667 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Events"2025-12-2025-12-05 21:42:50.727 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout=2025-12-05 21:42:50.727 +00:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."EventId", "t"."AvailableTickets", "t"."CategoryId", "t"."CreatedDate", "t"."CreatorId", "t"."Description", "t"."EventDateTime", "t"."TicketPrice", "t"."Title", "c"."CategoryId", "c"."CreatedDate", "c"."Description", "c"."Name"
+FROM (
+    SELECT "e"."EventId", "e"."AvailableTickets", "e"."CategoryId", "e"."CreatedDate", "e"."CreatorId", "e"."Description", "e"."EventDateTime", "e"."TicketPrice", "e"."Title"
+    FROM "Events" AS "e"
+    WHERE "e"."EventDateTime" > rtrim(rtrim(strftime('%Y-%m-%d %H:%M:%f', 'now'), '0'), '.')
+    ORDE2025-12-05 21:42:50.729 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Da2025-12-05 21:42:50.729 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Assignment1TicketingSystem.Data.ApplicationDbContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerato2025-12-05 21:42:50.736 +00:00 [ERR] Error loading homepage
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.Cre2025-12-05 21:42:50.736 +00:00 [ERR] Error loading homepage
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: e.CreatorId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Assignment1Tic2025-12-05 21:42:50.759 +00:00 [INF] Executing RedirectResult, redirecting to /error?message=Error%20loading%20events.
+2025-12-05 21:42:50.763 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139) in 135.6033ms22025-12-05 21:42:50.764 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Index (Assignment-1-COMP2139)'
+2025-12-05 21:42:50.772 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/ - 302 0 null 187.3943ms
+2025-12-05 21:42:52.397 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - null null
+2025-12-05 21:42:52.401 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:42:52.409 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.2025-12-05 21:42:52.409 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Mic2025-12-05 21:42:52.445 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:42:52.474 +00:00 [INF] Executed ViewResult - view Error executed in 32.2055ms.
+2025-12-05 21:42:52.475 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 64.5643ms
+2025-12-05 21:42:52.475 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:42:52.477 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?message=Error%20loading%20events - 200 null text/html; 2025-12-05 21:42:52.477 2025-12-05 21:42:57.678 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FLogin - null null
+2025-12-05 21:42:57.683 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:42:57.683 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.2025-12-05 21:42:57.683 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Mic2025-12-05 21:42:57.687 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:42:57.690 +00:00 [INF] Executed ViewResult - view Error executed in 3.8642ms.
+2025-12-05 21:42:57.693 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 8.2559ms
+2025-12-05 21:42:57.694 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:42:57.694 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FLogin - 200 null text/h2025-12-05 21:42:57.694 +00:02025-12-05 21:43:00.808 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - null null
+2025-12-05 21:43:00.810 +00:00 [INF] Executing endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:43:00.810 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.2025-12-05 21:43:00.810 +00:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Mic2025-12-05 21:43:00.811 +00:00 [INF] Executing ViewResult, running view Error.
+2025-12-05 21:43:00.812 +00:00 [INF] Executed ViewResult - view Error executed in 0.9296ms.
+2025-12-05 21:43:00.812 +00:00 [INF] Executed action Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139) in 1.9001ms
+2025-12-05 21:43:00.813 +00:00 [INF] Executed endpoint 'Assignment1TicketingSystem.Controllers.HomeController.Error (Assignment-1-COMP2139)'
+2025-12-05 21:43:00.813 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - 200 null tex2025-12-05 21:43:00.813 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5209/error?area=Identity&page=%2FAccount%2FRegister - 200 null text/html; charset=utf-8 5.2437ms
+2025-12-05 22:54:42.414 +00:00 [WRN] No store type was specified for the decimal property 'TicketPrice' on entity type 'Event'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-05 22:54:42.481 +00:00 [WRN] No store type was specified for the decimal property 'TotalCost' on entity type 'Purchase'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.22025-12-05 22:54:42.481 +00:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'PurchaseItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversi2025-12-05 22:54:42.481 +00:00 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'PurchaseItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
